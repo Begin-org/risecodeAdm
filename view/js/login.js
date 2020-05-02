@@ -10,11 +10,16 @@ $('#loginAdm').submit(function(){ //id do formulario
 	  if(data=="Login efetuado com sucesso"){
 		$( "#error" ).hide();
 		$( "#successful" ).show( "fast" );
+		$('#myModal').modal('show');
+		$('#myModal').on('hidden.bs.modal', function () {
+			document.location.href = "pag-home.php";
+		  })
+		setTimeout(() => {  document.location.href = "pag-home.php"; }, 6000);
 	  }else{
+		$('#myModal').modal('show');
 		$( "#successful" ).hide();
 		$( "#error" ).show( "fast" );
 	  }
-	  $('#myModal').modal('show');
 	}
 	
 	

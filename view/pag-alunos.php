@@ -9,99 +9,32 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 
     <!-- Import de CSS -->
-    <link rel="stylesheet" href="css/estilo-adm.css">
+    <link rel="stylesheet" href="estilo-adm.css">
 
     <!-- Imports de FontAwesome para os icones dinamicos de menu funcionarem -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
 </head>
+<?php
+session_start();
+if (empty($_SESSION['logado']))
+{
+    header("Location:index1.html");
+}
+?>
 <body>
     <div class="wrapper">
         
         <!-- Sidebar Holder -->
-        <nav id="sidebar">
-                <div class="sidebar-header">
-                    <img src="imgs/LOGO-RISECODE-branco.png" class="logo-menu"/>
-                </div>
-    
-                <ul class="list-unstyled components">
-                    
-                    <li>
-                        <a href="pag-home.html">
-                            <i class="fas fa-home icons-menu"></i> Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pag-escolas.html">
-                            <i class="fas fa-school icons-menu"></i>Escolas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pag-professores.html">
-                                <i class="fas fa-chalkboard-teacher icons-menu"></i>Professores
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="pag-alunos.html">
-                            <i class="fas fa-user-graduate icons-menu" style="margin-right: 15px; margin-left:2px;"></i>Alunos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pag-turmas.html">
-                                <i class="fas fa-users icons-menu"></i>Turmas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                            <i class="fas fa-chart-pie icons-menu"></i>Relatórios
-                        </a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="#">Tipo 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Tipo 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Tipo 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                
-            </nav>
+        <?php include "menuLateral.php" ?>
 
         <!-- Page Content Holder -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+          <!-- MENU DE CIMA -->
 
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#" class="navbar-sair"><i class="fas fa-sign-out-alt icons-navbar"></i>Sair</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fas fa-cog icons-navbar"></i>Configurações</a>
-                                </li>
-                                <li class="nav-item ab">
-                                    <a class="nav-link" href="#"><i class="fas fa-user-alt icons-navbar"></i>Perfil</a>
-                                </li>
-                            </ul>
-                    </div>
-                </div>
-            </nav>
+           <?php include "menuDeCima.php" ?>
             
             
             <div class="card card-estilizado d-inline-block center-block">

@@ -9,13 +9,20 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
     <!-- Import de CSS -->
-    <link rel="stylesheet" href="css/estilo-configuracoes.css">
+    <link rel="stylesheet" href="estilo-configuracoes.css">
 
     <!-- Imports de FontAwesome para os icones dinamicos de menu funcionarem -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
 </head>
+<?php
+session_start();
+if (empty($_SESSION['logado']))
+{
+    header("Location:index1.html");
+}
+?>
 <body>
     <div class="wrapper">
         

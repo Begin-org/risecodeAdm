@@ -5,14 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>RISECODE - LOGIN</title>
 
-  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="../node_modules/jquery/dist/jquery.js"></script>
-  <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
-  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="https://kit.fontawesome.com/07afd95a3d.js" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="css/estilo-login-adm.css">
+  <link rel="stylesheet" type="text/css" href="estilo-login-adm.css">
+
+  <style>
+    @keyframes pulse {
+    from { transform: scale(1); }
+    50% { transform: scale(0.85); }
+    to { transform: scale(1); }
+  }
+  
+  .fe-pulse {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  </style>
 
 </head>
 <body>
@@ -64,9 +72,9 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body" style="text-align: center;">
-        <img src="imgs/successful.png"/ style="display: none;" id="successful"/>
-        <img src="imgs/error.png" style="display: none;" id="error"/>
-        <p id="conteudo"></p>
+        <img src="imgs/successful.png"/ style="display: none;" id="successful" class="fe-pulse"/>
+        <img src="imgs/error.png" style="display: none;" id="error" class="fe-pulse"/>
+        <h4 id="conteudo" style="margin-top:1rem;" class="fe-pulse"></h4>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -74,6 +82,11 @@
     </div>
 
 
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/07afd95a3d.js" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
 </body>
 
