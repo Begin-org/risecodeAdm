@@ -145,6 +145,18 @@ body {
     cursor: pointer;
 }
 
+@keyframes pulse {
+    from { transform: scale(1); }
+    50% { transform: scale(0.85); }
+    to { transform: scale(1); }
+  }
+  
+  .fe-pulse {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
 /* Dispositivos large (desktops com 992px ou mais) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     @media(max-height:500px){

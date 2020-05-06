@@ -19,8 +19,8 @@
 body{
     background: rgb(215,255,235); /*caso alguma coisa dê errado, ele segura o fundo com essa cor*/
     background-image:
-        url('imgs/layer04_Clouds.png'),
-        url('imgs/rodape-junto.png'),
+        url('../imgs/layer04_Clouds.png'),
+        url('../imgs/rodape-junto.png'),
         linear-gradient(180deg, rgba(95,200,213,1) 0%, rgba(215,255,235,1) 100%);;
     background-repeat: repeat-x, repeat-x;
     background-position: top, bottom;
