@@ -20,21 +20,13 @@
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
 </head>
-
-<?php
-session_start();
-if (empty($_SESSION['logado']))
-{
-    header("Location:index1.php");
-}
-?>
-
+<!--confere se tem permissao para ver essa pagina-->
+<?php require_once "includes/esta-logado.php" ?>
 <body>
     <div class="wrapper">
 
-        <!-- Sidebar Holder -->
+        <!-- MENU LATERAL -->
         <?php include "includes/menu-lateral.php" ?>
 
         <!-- Page Content -->
@@ -43,6 +35,8 @@ if (empty($_SESSION['logado']))
             <!-- MENU DE CIMA -->
 
             <?php include "includes/menu-de-cima.php" ?>
+
+            <!-- 2 PRIMEIROS CARDS -->
 
             <div class="cardsG">
 
@@ -61,8 +55,9 @@ if (empty($_SESSION['logado']))
                     </div>
                 </div>
 
-
             </div>
+
+            <!-- 2 ULTIMOS CARDS -->
 
             <div class="cardsG">
 
@@ -92,7 +87,7 @@ if (empty($_SESSION['logado']))
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/chart.js"></script>
-
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

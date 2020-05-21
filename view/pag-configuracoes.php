@@ -19,16 +19,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
     </script>
-
 </head>
-<?php
-session_start();
-if (empty($_SESSION['logado']))
-{
-    header("Location:index1.php");
-}
-?>
-
+<!--confere se tem permissao para ver essa pagina-->
+<?php require_once "includes/esta-logado.php" ?>
 <body>
     <div class="wrapper">
 
@@ -79,7 +72,7 @@ if (empty($_SESSION['logado']))
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

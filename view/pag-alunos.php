@@ -19,30 +19,22 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
         integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
     </script>
-
 </head>
-<?php
-session_start();
-if (empty($_SESSION['logado']))
-{
-    header("Location:index1.php");
-}
-?>
-
+<!--confere se tem permissao para ver essa pagina-->
+<?php require_once "includes/esta-logado.php" ?>
 <body>
     <div class="wrapper">
 
-        <!-- Sidebar Holder -->
+        <!-- MENU LATERAL -->
         <?php include "includes/menu-lateral.php" ?>
 
         <!-- Page Content Holder -->
         <div id="content">
 
             <!-- MENU DE CIMA -->
-
             <?php include "includes/menu-de-cima.php" ?>
 
-
+            <!-- CABECALHO DA TABELA -->
             <?php include "includes/cabecalho.php" ?>
 
 
@@ -104,7 +96,6 @@ if (empty($_SESSION['logado']))
                             <p>Excluir</p>
                         </button>
                     </div>
-
                 </div>
                 <div class="card-footer footer-card-estilizado">Ver perfil</div>
             </div>
@@ -117,7 +108,7 @@ if (empty($_SESSION['logado']))
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="js/menu.js"></script>
-
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

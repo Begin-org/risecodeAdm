@@ -25,12 +25,12 @@
                 $telefones = array();
                 $turmas = array();
 
-                $array = $stmt->fetchAll();
+                $array = $stmt->fetchAll(); //transforma o retorno do stmt em array
                 $lastElement = end($array);
 
-                if($lastElement[0]!=0){
+                if($lastElement[0]!=0){ //se vier 0 eh porque ta errado
                 
-                    if (count($array) >= 0) {
+                    if (count($array) >= 0) { //se tiver dados pra percorrer
                         for($i=0;$i<count($array);$i++){
 
                             $row = $array[$i];

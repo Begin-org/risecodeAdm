@@ -22,31 +22,26 @@
 
 
 </head>
-<?php
-session_start();
-if (empty($_SESSION['logado']))
-{
-    header("Location:index1.php");
-}
-?>
-
+<!--confere se tem permissao para ver essa pagina-->
+<?php require_once "includes/esta-logado.php" ?>
 <body>
     <div class="wrapper">
 
-        <!-- Sidebar Holder -->
+        <!-- MENU LATERAL -->
         <?php include "includes/menu-lateral.php" ?>
 
         <!-- Page Content Holder -->
         <div id="content">
 
             <!-- MENU DE CIMA -->
-
             <?php include "includes/menu-de-cima.php" ?>
 
             <div id="whiteBox2">
                 <div class="form-group cadastro">
                     <fieldset class="scheduler-border">
                         <legend class="scheduler-border">Cadastro exemplo</legend>
+
+                        <!-- MOSTRA QUANTOS PASSOS TEM E QUAL O PASSO ATUAL -->
                         <div id="conteudoProgresso">
                             <ul id="progressbar">
                                 <li class="active" id="passo1"><strong>Passo</strong></li>
@@ -54,11 +49,16 @@ if (empty($_SESSION['logado']))
                                 <li id="passo3"><strong>Passo</strong></li>
                             </ul>
                         </div>
+
+                        <!-- BARRA DE PROGRESSO DAS ETAPAS DO FORMULARIO -->
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                                 aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
+
                         <div class="todosForms">
+                        
+                             <!-- PRIMEIRO FORMULARIO -->
                             <fieldset class="campos" id="campo1">
                                 <form id="form1">
                                     <div class="label-float">
@@ -88,6 +88,7 @@ if (empty($_SESSION['logado']))
                                 </form>
                             </fieldset>
 
+                             <!-- SEGUNDO FORMULARIO -->
                             <fieldset class="campos" id="campo2">
                                 <form id="form2">
                                     <div class="label-float">
@@ -117,6 +118,7 @@ if (empty($_SESSION['logado']))
                                 </form>
                             </fieldset>
 
+                             <!-- TERCEIRO FORMULARIO -->
                             <fieldset class="campos" id="campo3">
                                 <form id="form3">
                                     <div class="label-float">
@@ -146,7 +148,6 @@ if (empty($_SESSION['logado']))
                                 </form>
                             </fieldset>
 
-
                             <div class="aviso">
                                 <strong>Campos com asterísco (*) são obrigatórios</strong>
                             </div>
@@ -161,11 +162,10 @@ if (empty($_SESSION['logado']))
                     </fieldset>
                 </div>
             </div>
-
-
         </div>
     </div>
 
+    <!-- MODAL PARA FEEDBACK -->
     <?php include "includes/modal-feedback.php" ?>
 
     <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -174,6 +174,7 @@ if (empty($_SESSION['logado']))
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/steps.js"></script>
+    <script src="js/modal.js"></script>
 
 </body>
 

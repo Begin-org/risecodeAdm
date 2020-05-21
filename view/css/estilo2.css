@@ -3,17 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap');
 
-@keyframes moving {
-    0%{
-        background-position: 0 0, 0 0, bottom left;
-    }
-	
-    100%{
-        background-position: 100% 0, 100% 0, bottom left;
-    }
-}
-
 body{
+    will-change: box-shadow, z-index;
+    z-index: 1000;
     background: rgb(215,255,235); /*caso alguma coisa dê errado, ele segura o fundo com essa cor*/
     background-image:
         url('../imgs/estrelas-juntas-s-faixa.png'),
@@ -25,6 +17,16 @@ body{
     background-size: auto, 100vw, 100vw;            
     height: 2000px;
     animation: moving 20s infinite alternate;
+}
+
+@keyframes moving {
+    0%{
+        background-position: 0 0, 0 0, bottom left;
+    }
+	
+    100%{
+        background-position: 100% 0, 100% 0, bottom left;
+    }
 }
 
 /* barra */

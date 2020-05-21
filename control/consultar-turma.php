@@ -3,10 +3,10 @@
 include_once "../model/Turma.php";
 include_once "../dao/Turma.php";
 
-if (isset($_POST["txtDescricao"])) {
+if (isset($_POST["txtDescricao"])) { //se nao vier vazio eh pesquisa
     $txtDescricao = $_POST["txtDescricao"];
 }else{
-    $txtDescricao = "";
+    $txtDescricao = ""; //se vier vazio eh carregamento de pagina
 }
 
 $resp = consultar($txtDescricao);

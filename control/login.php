@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+session_start(); //comeca a sessao pra guardar os dados de quem ta logado
 
 include_once "../model/Usuario.php";
 include_once "../dao/Usuario.php";
@@ -17,7 +17,7 @@ $u->setIdTipoUsuario($tipoLogin);
 
 $resp = realizarLogin($u);
 
-if(is_string($resp)){
+if(is_string($resp)){ //se a resposta eh uma string, quer dizer que nao retornou quem ta logado entao ta errado. echo pra mostrar a mensagem de erro
     echo $resp;
 }else{
     $_SESSION['logado'] = serialize($resp); //guardar todo o objeto na sessao
