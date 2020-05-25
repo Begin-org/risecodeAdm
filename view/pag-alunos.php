@@ -7,7 +7,7 @@
     <title>Risecode</title>
 
     <!-- Imports para o boostrap funcionar -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Import de CSS -->
     <link rel="stylesheet" href="css/estilo-adm.css">
@@ -22,6 +22,7 @@
 </head>
 <!--confere se tem permissao para ver essa pagina-->
 <?php require_once "includes/esta-logado.php" ?>
+
 <body>
     <div class="wrapper">
 
@@ -37,78 +38,47 @@
             <!-- CABECALHO DA TABELA -->
             <?php include "includes/cabecalho.php" ?>
 
+            <div class="container" id="conteudoCards"></div>
 
-            <div class="card card-estilizado d-inline-block center-block">
-                <div class="card-header header-card-estilizado"><img src="imgs/img-user.jpg"
-                        class="mx-auto d-block img-card"></div>
-                <div class="card-body">
-                    <h5 class="card-title text-center title-card-estilizado">Fulano de tal</h5>
-                    <div class="mx-auto d-block label-aluno">
-                        <img src="imgs/users.png" /> Aluno
-                    </div>
-                    <div class="mx-auto d-block" style="margin-top:20px;">
-                        <button type="button" class="btn botao-card">
-                            <p>Editar</p>
-                        </button>
-                        <button type="button" class="btn botao-card">
-                            <p>Excluir</p>
-                        </button>
-                    </div>
-
-                </div>
-                <div class="card-footer footer-card-estilizado">Ver perfil</div>
-            </div>
-
-            <div class="card card-estilizado d-inline-block center-block">
-                <div class="card-header header-card-estilizado"><img src="imgs/img-user.jpg"
-                        class="mx-auto d-block img-card"></div>
-                <div class="card-body">
-                    <h5 class="card-title text-center title-card-estilizado">Fulano de tal</h5>
-                    <div class="mx-auto d-block label-aluno">
-                        <img src="imgs/users.png" /> Aluno
-                    </div>
-                    <div class="mx-auto d-block" style="margin-top:20px;">
-                        <button type="button" class="btn botao-card">
-                            <p>Editar</p>
-                        </button>
-                        <button type="button" class="btn botao-card">
-                            <p>Excluir</p>
-                        </button>
-                    </div>
-
-                </div>
-                <div class="card-footer footer-card-estilizado">Ver perfil</div>
-            </div>
-
-            <div class="card card-estilizado d-inline-block center-block">
-                <div class="card-header header-card-estilizado"><img src="imgs/img-user.jpg"
-                        class="mx-auto d-block img-card"></div>
-                <div class="card-body">
-                    <h5 class="card-title text-center title-card-estilizado">Fulano de tal</h5>
-                    <div class="mx-auto d-block label-aluno">
-                        <img src="imgs/users.png" /> Aluno
-                    </div>
-                    <div class="mx-auto d-block" style="margin-top:20px;">
-                        <button type="button" class="btn botao-card">
-                            <p>Editar</p>
-                        </button>
-                        <button type="button" class="btn botao-card">
-                            <p>Excluir</p>
-                        </button>
-                    </div>
-                </div>
-                <div class="card-footer footer-card-estilizado">Ver perfil</div>
-            </div>
         </div>
     </div>
-    </div>
 
-    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/modal.js"></script>
+    <!-- MODAL PARA FEEDBACK -->
+    <?php include "includes/modal-feedback.php" ?>
+
+    <!-- MODAL PARA CONSULTA -->
+    <div id="myModal" class="modal fade" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Consulta de aluno</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-5" id="imgAlunoModal">
+                        </div>
+                        <div class="col-7">
+                            <h4 id="nome"></h4>
+                            <h6 id="ra"></h6>
+                            <h6 id="usuario"></h6>
+                            <h6 id="serie"></h6>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="js/aluno.js"></script>
 </body>
 
 </html>

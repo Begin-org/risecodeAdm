@@ -7,7 +7,7 @@
     <title>Risecode</title>
 
     <!-- Imports para o boostrap funcionar -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- Import de CSS -->
     <link rel="stylesheet" href="css/estilo-adm.css">
@@ -168,10 +168,9 @@
     <!-- MODAL PARA FEEDBACK -->
     <?php include "includes/modal-feedback.php" ?>
 
-    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/steps.js"></script>
     <script src="js/modal.js"></script>

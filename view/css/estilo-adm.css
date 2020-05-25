@@ -299,6 +299,18 @@ fieldset.scheduler-border {
     min-width: 40%;
     max-width: 40%;
   }
+
+  .label-float-file{
+    display: inline-block;
+    position: relative;
+    padding-top: 13px;
+    margin-top: 2em;
+    margin-right: 3%;
+    margin-left: 3%;
+    min-width: 40%;
+    max-width: 40%;
+  }
+  
   
 
 .modalLabelFloat{
@@ -321,6 +333,32 @@ fieldset.scheduler-border {
     -moz-transition: all .1s linear;
     -webkit-appearance:none;
   }
+
+  #select {
+    height: 60px;
+}
+
+#select option:first-child{
+    color: red !important;
+  }
+
+
+  .btn-nr{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .label-float-file input{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
   
   .label-float input:focus{
     border: 2px solid #3951b2;
@@ -627,16 +665,23 @@ input[type="text"].pesquisa2{
     CARDS DE EXIBICAO
 ----------------------------------------------------- */
 
+#conteudoCards{
+    max-width: 100%;
+    min-width: 100%;
+    margin-top:5em;
+}
+
+
 .card-estilizado {
     background-color: #f2f0f0;
     border:none;
     max-width: 14rem;
     min-height: 18rem;
     max-height: 18rem;
-    margin-top: 10vh;
     margin-left: 1rem;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    margin-bottom: 5vh;
 }
 
 .card-estilizado:hover{
@@ -866,9 +911,7 @@ td{
     .progress{
         margin-top: 2em;
     }
-}
 
-@media (max-width: 1700px) {
     .label-float{
         min-width: 90%;
         max-width: 90%;
@@ -883,6 +926,12 @@ td{
         width: 90%;
         margin-top:3em;
     }
+
+    .label-float-file input{
+        min-width: 100%;
+    }
+
+
 }
 
 @media (max-width: 1160px) {

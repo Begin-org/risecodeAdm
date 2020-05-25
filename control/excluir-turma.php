@@ -7,7 +7,7 @@ $idTurma = $_POST["idTurma"];
 
 $resp = excluir($idTurma);
 
-print json_encode($resp);
+print $resp;
 
 
 ?>

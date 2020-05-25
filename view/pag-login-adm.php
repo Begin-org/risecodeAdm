@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RISECODE - LOGIN</title>
     <!-- Imports para o boostrap funcionar -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Import de CSS -->
     <link rel="stylesheet" type="text/css" href="css/estilo-login-adm.css">
 
@@ -58,10 +58,9 @@
     <?php include "includes/modal-feedback.php" ?>
 
 
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="https://getbootstrap.com/docs/4.1/assets/js/vendor/popper.min.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/07afd95a3d.js" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
     <script src="js/modal.js"></script>

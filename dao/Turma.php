@@ -37,14 +37,15 @@
         }
     }
 
-    function consultar($descricao){
+    function consultar($descricao,$idEscola){
 
         try{
 
             $conn = abrirConexao();
 
-            $stmt = $conn->prepare("CALL consultarTurmas(?);");
+            $stmt = $conn->prepare("CALL consultarTurmas(?,?);");
             $stmt->bindValue(1, $descricao, PDO::PARAM_STR);
+            $stmt->bindValue(2, $idEscola, PDO::PARAM_INT);
             $stmt->execute();
 
             $array = $stmt->fetchAll(); //transforma o retorno do stmt em array
@@ -64,6 +65,46 @@
                     array_push($arrayTurmas, $linha);
                 }
             }
+
+            return $arrayTurmas;
+
+        }catch(Exception $e){
+
+            return "Erro ao consultar! Descrição do erro: " . $e;
+
+        }finally{
+
+            fecharConexao($conn);
+
+        }
+
+    }
+
+    function preencherSelect($idEscola){
+
+        try{
+
+            $conn = abrirConexao();
+
+            $stmt = $conn->prepare("CALL consultarTurmas(?,?);");
+            $stmt->bindValue(1, "", PDO::PARAM_STR);
+            $stmt->bindValue(2, $idEscola, PDO::PARAM_INT);
+            $stmt->execute();
+
+            $array = $stmt->fetchAll(); //transforma o retorno do stmt em array
+            $arrayTurmas = array();
+
+            for($i=0;$i<count($array);$i++){
+                 $row = $array[$i];
+
+                 $t = new \stdClass();
+
+                 $t->descricao = $row["descricao"];
+                 $t->idTurma = $row["idTurma"];
+
+                array_push($arrayTurmas, $t);
+            }
+
 
             return $arrayTurmas;
 

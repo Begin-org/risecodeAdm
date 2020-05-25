@@ -122,7 +122,6 @@ $(document).on('click', '.fa-trash', function () { //se clicar em algum icone de
             type: 'POST', //define que o tipo que ta sendo enviado eh post
             dataType: "html", //define que o tipo que ta sendo retorno eh html, para poder injetar no modal a resposta
             success: function (data) { // caso de certo ele pega a resposta (echo do php)
-                mostrarModalSucesso(data);
                 $('#feedback').on('hidden.bs.modal', function () { //se o modal for fechado
                     document.location.reload(true); //recarrega a pagina para ver as alteracoes
                 });
