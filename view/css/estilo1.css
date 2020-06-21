@@ -1,31 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Chewy&display=swap');
-
 @import url('https://fonts.googleapis.com/css?family=Boogaloo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap');
 
 @keyframes moving {
     0%{
-        background-position: 0 0, bottom left;
+        background-position: 0 0;
     }
 	
     100%{
-        background-position: 100% 0, bottom left;
+        background-position: 100% 0;;
+    }
+}
+
+@keyframes flutuar {
+    0% {
+        margin-left: -10px;
+    }
+    100%{
+        margin-right: 20px;
     }
 }
 
 body{
-    background: rgb(215,255,235); /*caso alguma coisa dê errado, ele segura o fundo com essa cor*/
+    background:  #23485e; /*caso alguma coisa dê errado, ele segura o fundo com essa cor*/
     background-image:
         url('../imgs/layer04_Clouds.png'),
-        url('../imgs/rodape-junto.png'),
-        linear-gradient(180deg, rgba(95,200,213,1) 0%, rgba(215,255,235,1) 100%);;
+        linear-gradient(180deg, #5fc8d5 0%, #9bd5dd  100%);
     background-repeat: repeat-x, repeat-x;
     background-position: top, bottom;
     background-size: 80vw, 40vw;      
-    height: 2000px;
+    height: 800px;
     animation: moving 8s infinite alternate;
 }
 
@@ -37,7 +40,7 @@ body{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
-    background-color: #A680A0;
+    background-color: #8787E8;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
 }
 
@@ -49,6 +52,20 @@ body{
 
 /* pagina */
 
+.container-especializado{
+	padding:0;
+}
+
+.botao-fab{
+    background-color: rgb(255,102,102)!important;
+    width:60px!important;
+    height:60px!important;
+}
+
+#icone-fab{
+    font-size:35px!important;
+}
+
 .cabecalho {
     display: flex;
     flex-wrap: flex;
@@ -57,60 +74,214 @@ body{
     padding-top:20px;
 }
 
-/* popover */
-.titulo-popover {
-    font-family: 'Londrina Solid', cursive;
-    color: rgb(29, 29, 29);
-    font-size: 20px;
-}
-
-.labels-form {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.botao-entrar {
-    background-color:#ed484e;
-    margin:5px;
-    padding:8px;
-    font-family: 'Londrina Solid', cursive;
-    letter-spacing: 1pt;
-    color: rgb(211, 210, 210);
-}
-
-
 .botao-login-adm {
-    background-color:#ed484e;
-    margin:5px;
-    padding:8px;
+    background-color:#8787E8;
+    margin-top:10px;
+    margin-right: 20px;
+    padding:12px;
     font-family: 'Londrina Solid', cursive;
     letter-spacing: 1pt;
     color: rgb(211, 210, 210);
-    
+    border-radius: 5px;
 }
 
 .botao-login-adm:hover {
-    padding:10px;
-    color: #60c8d5;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.1);
+    color:white;
+    text-decoration: none;
 }
 
-.botao-login-aluno {
-    background-color:#ed484e;
-    margin:5px;
-    padding:8px;
+.logo{
+    margin-top:-90px;
+}
+
+.botao-jogar {
+    background-color: transparent;
+    width:40vw;
+    height: 34vh;
+    margin-top: 3vh;
+    margin-left: 30vw;
+    transition: all 0.3 ease;
+}
+
+.botao-jogar:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.1);
+}
+
+.chao {
+	width:100%;
+	height:380px;
+	background-color:transparent;
+	background-image: url('../imgs/layer01_Ground.png');
+	background-size:50% 100%;
+	background-repeat: repeat-x;
+	margin-top:-54vh;
+}
+
+.content-chao {
+	width:100%;
+	height:1650;
+	background-color: #23485e;
+	padding-top: 100px;
+}
+
+.titulo-login-aluno{
     font-family: 'Londrina Solid', cursive;
-    letter-spacing:2pt;
-    font-size:17px;
-    color: rgb(211, 210, 210);
+    color: #E8C28B;
+    font-size: 50px;
+    margin-top: -10vh;
+    text-align: center;
 }
 
-.botao-login-aluno:hover {
-    padding:10px;
-    color: #60c8d5;
+.login-aluno{
+    background-color: transparent;
+    background-image: url('../imgs/form-login-aluno.png');
+    background-position-x: -1vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:58vw;
+    height:300px;
+    margin:0 auto;
+    border-radius: 10px;
+    transform: all 0.3s;
+    align-items: center;
+    margin-top: -5vh;
 }
 
-.logo-centro{
-    margin-left:auto;
-    margin-right:auto;
+.labels-forms-login{
+    font-family: 'Londrina Solid', cursive;
+    color: #E8C28B;
+    font-size: 26px;
 }
+
+.forms-login{
+    height:36px!important;
+    width:25vw;
+    background-color: rgba(255,255,255,0.5)!important;
+    border:none;
+    border-radius:5px!important;
+}
+
+.form-group-personalizado{
+    margin-top: -1.5vh;
+}
+
+.botao-form-login{
+    background-color: #E8C28B;
+    width: 9vw;
+    height: 40px;
+    font-family: 'Londrina Solid', cursive;
+    color: #213D59;
+    font-size: 22px;
+    margin-left: 4vw;
+    border:none;
+    border-radius: 5px;
+}
+
+.botao-form-login:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.content-video{
+	background-color: white;
+    width:60vw;
+    height:400px;
+    margin:0 auto;
+    border-radius: 10px;
+    border: 4px solid #404040;
+}
+
+.titulo-oque{
+    width:auto;
+    margin:0 auto;
+    font-family: 'Londrina Solid', cursive;
+    color: #E8C28B;
+    font-size: 35pt;
+    text-align: center;
+    margin-top:4vw;
+}
+
+.content-para-alunos{
+    background-color: transparent;
+    width: 80vw;
+    height: 40vh;
+    margin-top:5vw!important;
+    margin:0 auto;
+}
+
+.content-para-alunos ul{
+    list-style-type: none;
+    margin-left: 20vw;
+}
+
+.girl-oque-e{
+    width:20vw;
+    height:45vh;
+    float:left;
+    margin-top:-40px;
+    animation: flutuar 4s infinite alternate;
+}
+
+.titulo-para-alunos{
+    font-family: 'Londrina Solid', cursive;
+    color: #E8C28B;
+    font-size: 30pt;
+    margin-left: 30vw;
+}
+
+.estilo-li{
+    font-family: 'Londrina Solid', cursive;
+    color: #E8C28B;
+    font-size: 20pt;
+    margin-left: 5vw;
+    margin-top:20px;
+}
+
+.estilo-li img{
+    width:55px;
+    height:65px;
+}
+
+.content-para-profes{
+    background-color: transparent;
+    width: 80vw;
+    height: 40vh;
+    margin-top:6vw!important;
+    margin:0 auto;
+}
+
+.content-para-profes ul{
+    list-style-type: none;
+    margin-left: -2vw;
+}
+
+.boy-oque-e{
+    width:25vw;
+    height:60vh;
+    float: right;
+    margin-top:-80px;
+    animation: flutuar 4s infinite alternate;
+}
+
+.footer{
+    background-color: rgb(36, 65, 94);
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    font-size: 20pt;
+    color: rgba(216, 216, 216, 0.856);
+    height:100px;
+    animation: none;
+}
+
+.footer img{
+    margin: 0 auto;
+    width:100px;
+    height:40px;
+}
+  

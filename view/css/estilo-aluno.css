@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap');
+
+@keyframes moving {
+    0%{
+        background-position: 0 0, bottom left, top left;
+    }
+	
+    100%{
+        background-position: 100% 0, bottom left, top left;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(215,255,235); /*caso alguma coisa dê errado, ele segura o fundo com essa cor*/
+    background-image:
+        url('../imgs/layer04_Clouds.png'),
+        url('../imgs/layer01_Ground.png'),
+        linear-gradient(180deg, rgba(95,200,213,1) 0%, rgb(187, 224, 245) 100%);;
+    background-repeat: repeat-x, repeat-x;
+    background-position: top, bottom;
+    background-size: 80vw, 40vw;      
+    height: 1000px;
+    animation: moving 8s infinite alternate;
+}
+
+/* barra */
+::-webkit-scrollbar{
+    width: 8px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(59, 172, 187);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+.container-especializado{
+	padding:0;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:15px 100px 15px 100px;
+    margin-top: 6vh;
+}
+
+.cabecalho {
+    display: flex;
+    flex-wrap: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top:10px;
+    background-color: transparent;
+    height: 16vh;
+}
+
+.icon-perfil-header{
+    height: 130px;
+    width:120px;
+    margin-right:1vw;
+    cursor: pointer;
+}
+
+.texto-perfil-header{
+    font-family: 'Londrina Solid', cursive;
+    letter-spacing: 1pt;
+    color: rgb(211, 210, 210);
+    font-size:26pt;
+    margin-right:10pt;
+    cursor:pointer;
+}
+
+.icon-risecode-header{
+    width:130px;
+    height:80;
+}
+
+.card-jogo {
+    width: 12.5rem;
+    height:13rem;
+    background-image: url('./imgs/card4.png');
+    background-size:100% 100%;
+    background-color:transparent;
+    border:none;
+    margin-top: 5vh;
+    margin-left:40px;
+	transition: all 0.3s;
+}
+
+.card-jogo:hover{
+	width:13rem;
+	height:13.5rem;
+	margin-top:4.5vh;
+}
+
+.img-card-jogo{
+    width: 8rem;
+    height:6rem;
+    margin:0 auto;
+    margin-top:1rem;
+}
+
+.estrelas-card{
+    width: 6rem;
+    height: 1.8rem;
+    margin:0 auto;
+    margin-top:-38px;
+}
+
+.btn-card-jogar{
+    background-image: url("./imgs/btn-jogar-card2.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width:110px;
+    height:35px;
+    margin-top: -10px;
+    transition: all 0.3s;
+}
+
+.btn-card-jogar:hover{
+    width: 120px;
+    height: 40px;
+    margin-top: -12px;
+}
+
+.card-text{
+    font-family: 'Londrina Solid', cursive;
+    letter-spacing: 1pt;
+    color: rgb(59, 59, 59);
+    font-size:14pt;
+    margin-top:-0.5rem;
+}
+
+
+.modal-content-perfil{
+    display: flex;
+    flex-wrap: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(221, 221, 221);
+}
+
+.titulo-modal-perfil{
+    font-family: 'Londrina Solid', cursive;
+    letter-spacing: 1pt;
+    color: rgb(59, 59, 59);
+    font-size:26pt;
+    margin-top:20px;
+}
+
+.avatar-modal{
+    width:12vw;
+    height: 15vw;
+}
+
+.badge-nome{
+    background-color: rgba(102, 153, 153, 0.301);
+    color: rgb(88, 91, 132);
+    font-size:14pt;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) { 
+    
+}
