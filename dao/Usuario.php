@@ -99,23 +99,23 @@
                                 $class = new Turma();
                                 $school = new Escola();
 
-                                $class->setIdTurma($row["tbTurma.idTurma"]);
-                                $class->setDescricao($row["tbTurma.descricao"]);
+                                $class->setIdTurma($row["idTurma"]);
+                                $class->setDescricao($row["descricao"]);
 
-                                $school->setIdEscola($row["tbEscola.idEscola"]);
-                                $school->setBairro($row["tbEscola.bairro"]);
-                                $school->setCep($row["tbEscola.cep"]);
-                                $school->setCidade($row["tbEscola.cidade"]);
-                                $school->setEstado($row["tbEscola.idEstado"]);
-                                $school->setLogradouro($row["tbEscola.logradouro"]);
-                                $school->setNumero($row["tbEscola.idNumero"]);
+                                $school->setIdEscola($row["idEscola"]);
+                                $school->setBairro($row["bairro"]);
+                                $school->setCep($row["cep"]);
+                                $school->setCidade($row["cidade"]);
+                                $school->setEstado($row["estado"]);
+                                $school->setLogradouro($row["logradouro"]);
+                                $school->setNumero($row["numero"]);
 
                                 $class->setEscola($school);
                                     
-                                $student->setIdAluno($row["tbAluno.idAluno"]);
+                                $student->setIdAluno($row["idAluno"]);
                                 $student->setUsuario($usuario);
-                                $student->setNome($row["tbAluno.nome"]);
-                                $student->setRa($row["tbAluno.ra"]);
+                                $student->setNome($row["nome"]);
+                                $student->setRa($row["ra"]);
                                 $student->setTurma($class);
 
                                 return $student;

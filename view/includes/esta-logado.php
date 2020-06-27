@@ -4,6 +4,8 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . '/risecode/model/Usuario.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . '/risecode/model/Escola.php');
     require_once($_SERVER['DOCUMENT_ROOT'] . '/risecode/model/Professor.php');
+
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/risecode/model/Aluno.php');
     if (empty($_SESSION['logado']))//se nao tiver ninguem logado
     {
         header("Location:index1.php");//redireciona para o index
@@ -19,6 +21,10 @@
         if(($nomeArq == "pag-escolas" && $idTipo != 1) || ($nomeArq == "pag-alunos" && $idTipo != 2) || ($nomeArq == "pag-escolas" && $idTipo != 2)
         || ($nomeArq == "pag-turmas" && $idTipo != 2) || ($nomeArq == "cadastro-aluno" && $idTipo != 2)){
             header("Location:pag-home.php");
+        }
+
+        if(($nomeArq == "pag-home-aluno" && $idTipo !=4)){
+            header("Location:pag-home-aluno.php");
         }
     }
 ?>

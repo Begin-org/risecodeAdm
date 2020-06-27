@@ -31,7 +31,11 @@ $('#loginAdm').submit(function(){ //id do formulario
 	type: 'POST',
 	data: $('#loginAluno').serialize(),//manda os dados separados
 	success:function(data){ // caso de certo ele pega a resposta (echo do php)
-	 alert(data);
+		if(data=="Login efetuado com sucesso"){
+			setTimeout(() => {  document.location.href = "pag-home-aluno.php"; }, 1500);
+		  }else{
+			mostrarModalErro(data);
+		  }
 	}
 	
 	

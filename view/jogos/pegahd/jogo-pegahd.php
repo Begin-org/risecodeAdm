@@ -39,7 +39,7 @@
             </div>
         </div> 
         <div class="cabecalho">
-            <a class="" href="#">
+            <a class="" href="../../pag-home-aluno.php">
                 <img src="../../imgs/LOGO-RISECODE2.png" class="icon-risecode-header" alt="">
             </a>
             <p class="texto-perfil-header" data-toggle="modal" data-target="#modalPerfil">Perfil</p>
@@ -101,8 +101,8 @@
                         x:5+Math.floor(800*Math.random()),
                         y:0,
                        // largura: 30+ Math.floor(21*Math.random()), //aula3
-                        largura:50,
-                        altura:30,
+                        largura:70,
+                        altura:70,
                         cor: this.cores[Math.floor(5*Math.random())],
                         tipo: this.tipos[Math.floor(4*Math.random())], 
                     });
@@ -116,12 +116,21 @@
                         this.tempoInsere--;
                     }
 
+                    var colidiuCerto = false;
                     for(var i = 0, tam = this._obs.length; i<tam; i++){
+
                         var obs = this._obs[i];
                         obs.y+=velocidadeObs;
 
                         if(bloco.y <= obs.y+obs.altura && obs.x>=bloco.x && obs.x<=bloco.x+bloco.largura && obs.tipo!=1){
                             estadoAtual = estados.perdeu;
+                        } else if(bloco.y <= obs.y+obs.altura && obs.x>=bloco.x && obs.x<=bloco.x+bloco.largura && obs.tipo==1){
+                            colidiuCerto = true;
+                            this._obs.splice(i, 1);
+                            tam--;
+                            i--;
+                            break;
+
                         }
 
                         if(obs.y>= ALTURA-obs.altura-chao.altura){
@@ -129,7 +138,11 @@
                             tam--;
                             i--;
                         }
+                    }
 
+                    if(colidiuCerto == true){
+                        bloco.score++;
+                        
                     }
                     
                 },
@@ -143,12 +156,18 @@
                     
                         var obs = this._obs[i];
                         if(obs.tipo==1){
-                            ctx.fillStyle = "#6f51b0";
+                            spriteHD.desenha(obs.x, obs.y);
+                            //ctx.fillStyle = "#6f51b0";
+                        } else if(obs.tipo==2){
+                            spritePendrive.desenha(obs.x, obs.y);
+                            //ctx.fillStyle = obs.cor;
+                            //ctx.fillRect(obs.x, obs.y, obs.largura, obs.altura);
+                        } else if(obs.tipo==3){
+                            spriteProcessador.desenha(obs.x, obs.y);
                         } else {
-                            ctx.fillStyle = obs.cor;
-                        
+                            spriteWifi.desenha(obs.x, obs.y);
                         }
-                        ctx.fillRect(obs.x, obs.y, obs.largura, obs.altura);
+                        //ctx.fillRect(obs.x, obs.y, obs.largura, obs.altura);
                         
                     }
                 }
@@ -157,6 +176,7 @@
         function clique(evento){
             if(estadoAtual==estados.jogar){
                 estadoAtual = estados.jogando;
+                bloco.score = 0;
             } else if(estadoAtual==estados.perdeu){
                 estadoAtual=estados.jogar;
                 obstaculos.limpa();   
@@ -198,6 +218,11 @@
            // ctx.fillRect(0,0, LARGURA, ALTURA);
             bg.desenha(0,0);
             //cesta.desenha(bloco.x,bloco.y);
+
+            //score
+            ctx.fillStyle = "#84A80F";
+            ctx.font = "50px Londrina Solid";
+            ctx.fillText(bloco.score, 30, 50);
                 
             if(estadoAtual==estados.jogando){
                 obstaculos.desenha();
