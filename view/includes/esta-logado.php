@@ -18,7 +18,8 @@
         //tipo 1 - adm
         //tipo 2 - escola
         //tipo 3 - professor
-        if(($nomeArq == "pag-escolas" && $idTipo != 1) || ($nomeArq == "pag-alunos" && $idTipo != 2) || ($nomeArq == "pag-escolas" && $idTipo != 2)
+        //tipo 4 - aluno
+        if(($nomeArq == "pag-escolas" && $idTipo != 1 && $nomeArq == "pag-escolas" && $idTipo != 2) || ($nomeArq == "pag-alunos" && $idTipo != 2)
         || ($nomeArq == "pag-turmas" && $idTipo != 2) || ($nomeArq == "cadastro-aluno" && $idTipo != 2)){
             header("Location:pag-home.php");
         }

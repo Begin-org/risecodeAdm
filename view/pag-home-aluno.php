@@ -48,12 +48,14 @@
                     </div>
                 </div>
             </a>
-            <div class="card" style="width: 18rem; height: 14rem;">
-                <img class="card-img-top" style="height: 9rem;" src="./imgs/jogohd.png" alt="Imagem de capa do card">
-                <div class="card-body">
-                    <p class="card-text">Pegue HD's e fuja de outros componentes.</p>
+            <a href="jogos/conjuntos/jogo-conjuntos.php">
+                <div class="card" style="width: 18rem; height: 14rem;">
+                    <img class="card-img-top" style="height: 9rem;" src="./imgs/jogohd.png" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <p class="card-text">Coloque os componentes nos conjuntos certos.</p>
+                    </div>
                 </div>
-            </div>
+            </a>
             <div class="card" style="width: 18rem; height: 14rem;">
                 <img class="card-img-top" style="height: 9rem;" src="./imgs/jogohd.png" alt="Imagem de capa do card">
                 <div class="card-body">

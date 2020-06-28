@@ -3,9 +3,9 @@ var myChart = new Chart(ctx, {
     type: 'bar',
     animationEnabled: true,
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Pegue HD´s', 'Conjuntos', 'Labirinto de Pastas', 'Decisões'],
         datasets: [{
-            label: '# of Votes',
+            label: "Votos",
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -27,6 +27,17 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+        legend: {
+            display: false,
+            labels: {
+                fontSize: 17
+            }
+        },
+        title: {
+            display: true,
+            text: 'Engajamento das crianças com os minijogos',
+            fontSize: 25
+        },
         scales: {
             yAxes: [{
                 ticks: {
@@ -45,38 +56,44 @@ var myChart2 = new Chart(ctx2, {
     type: 'line',
     animationEnabled: true,
     data: {
-        labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+        labels: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
         datasets: [{
-            data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
-            label: "Africa",
+            data: [5, 10, 12, 13, 16, 20, 28, 33, 48, 69],
+            label: "Escola Feirreiro Rocha",
             borderColor: "#3e95cd",
             fill: false
         }, {
-            data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
-            label: "Asia",
+            data: [5, 60, 65, 48, 57,46, 78, 65, 64, 58],
+            label: "Escola Ernandes II",
             borderColor: "#8e5ea2",
             fill: false
         }, {
-            data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
-            label: "Europe",
+            data: [5, 15, 16, 17, 18, 33, 48, 54, 67, 73],
+            label: "Escola Rosa de Neon",
             borderColor: "#3cba9f",
             fill: false
         }, {
-            data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
-            label: "Latin America",
+            data: [5, 20, 10, 16, 24, 38, 74, 16, 50, 78],
+            label: "Escola Eneias V",
             borderColor: "#e8c3b9",
             fill: false
         }, {
-            data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
-            label: "North America",
+            data: [6, 3, 2, 2, 7, 26, 82, 17, 31, 100],
+            label: "Escola Anjos de Prata",
             borderColor: "#c45850",
             fill: false
         }]
     },
     options: {
+        legend: {
+            labels: {
+                fontSize: 17
+            }
+        },
         title: {
             display: true,
-            text: 'World population per region (in millions)'
+            text: 'Escolas com maior progresso',
+            fontSize: 25
         }
 
     }
@@ -89,7 +106,7 @@ var myChart3 = new Chart(ctx3, {
     type: 'doughnut',
     animationEnabled: true,
     data: {
-        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+        labels: ["2º", "4º", "5º", "3º", "6º"],
         datasets: [{
             label: "Population (millions)",
             backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
@@ -97,9 +114,15 @@ var myChart3 = new Chart(ctx3, {
         }]
     },
     options: {
+        legend: {
+            labels: {
+                fontSize: 17
+            }
+        },
         title: {
             display: true,
-            text: 'Predicted world population (millions) in 2050'
+            text: 'Turmas que mais jogaram',
+            fontSize: 25
         }
     }
 });
@@ -111,7 +134,7 @@ var myChart4 = new Chart(ctx4, {
     type: 'pie',
     animationEnabled: true,
     data: {
-        labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+        labels: ["4º", "3º", "5º", "1º", "2º"],
         datasets: [{
             label: "Population (millions)",
             backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
@@ -119,9 +142,15 @@ var myChart4 = new Chart(ctx4, {
         }]
     },
     options: {
+        legend: {
+            labels: {
+                fontSize: 17
+            }
+        },
         title: {
             display: true,
-            text: 'Predicted world population (millions) in 2050'
+            text: 'Progresso das turmas',
+            fontSize: 25
         }
     }
 });
