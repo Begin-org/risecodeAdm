@@ -6,15 +6,22 @@ function terminar() {
     // comeco juncao = B.left
     // fim juncao = A.left + A.width
 
+    let gate = document.getElementById("gate");
+    let gate2 = document.getElementById("gate2");
+    let ball = document.getElementById("ball");
+    let ball2 = document.getElementById("ball2");
+    let ball3 = document.getElementById("ball3");
+    let ball4 = document.getElementById("ball4");
+
     //placa mae = sem numero
     // mouse = 2
     // teclado = 3
     //disco rigido = 4
 
-    if((document.getElementById("ball").offsetLeft > document.getElementById("gate").offsetLeft && document.getElementById("ball").offsetLeft < document.getElementById("gate2").offsetLeft) && (document.getElementById("ball").offsetTop > document.getElementById("gate").offsetTop) && (document.getElementById("ball").offsetTop < (document.getElementById("gate").offsetTop + document.getElementById("gate").offsetHeight))
-    && (document.getElementById("ball4").offsetLeft > document.getElementById("gate").offsetLeft && document.getElementById("ball4").offsetLeft < document.getElementById("gate2").offsetLeft) && (document.getElementById("ball4").offsetTop > document.getElementById("gate").offsetTop) && (document.getElementById("ball4").offsetTop < (document.getElementById("gate").offsetTop + document.getElementById("gate").offsetHeight))
-    && ((document.getElementById("ball2").offsetLeft > document.getElementById("gate2").offsetLeft && document.getElementById("ball2").offsetLeft < (document.getElementById("gate").offsetLeft + document.getElementById("gate").offsetWidth)) && (document.getElementById("ball2").offsetTop > document.getElementById("gate").offsetTop) && (document.getElementById("ball2").offsetTop < (document.getElementById("gate").offsetTop + document.getElementById("gate").offsetHeight)))
-    && ((document.getElementById("ball3").offsetLeft > (document.getElementById("gate").offsetLeft + document.getElementById("gate").offsetWidth) && document.getElementById("ball3").offsetLeft < (document.getElementById("gate2").offsetLeft + document.getElementById("gate2").offsetWidth)) && (document.getElementById("ball3").offsetTop > document.getElementById("gate2").offsetTop) && (document.getElementById("ball3").offsetTop < (document.getElementById("gate2").offsetTop + document.getElementById("gate2").offsetHeight)))){
+    if((ball.getBoundingClientRect().left > gate.getBoundingClientRect().left && ball.getBoundingClientRect().left < gate2.getBoundingClientRect().left) && (ball.getBoundingClientRect().top > gate.getBoundingClientRect().top) && (ball.getBoundingClientRect().top < (gate.getBoundingClientRect().top + gate.offsetHeight))
+    && (ball4.getBoundingClientRect().left > gate.getBoundingClientRect().left && ball4.getBoundingClientRect().left < gate2.getBoundingClientRect().left) && (ball4.getBoundingClientRect().top > gate.getBoundingClientRect().top) && (ball4.getBoundingClientRect().top < (gate.getBoundingClientRect().top + gate.offsetHeight))
+    && ((ball2.getBoundingClientRect().left && ball2.getBoundingClientRect().left < (gate.getBoundingClientRect().left + gate.offsetWidth)) && (ball2.getBoundingClientRect().top > gate.getBoundingClientRect().top) && (ball2.getBoundingClientRect().top < (gate.getBoundingClientRect().top + gate.offsetHeight)))
+    && ((ball3.getBoundingClientRect().left > (gate.getBoundingClientRect().left + gate.offsetWidth) && ball3.getBoundingClientRect().left < (gate2.getBoundingClientRect().left + gate2.offsetWidth)) && (ball3.getBoundingClientRect().top > gate2.getBoundingClientRect().top) && (ball3.getBoundingClientRect().top < (gate2.getBoundingClientRect().top +gate2.offsetHeight)))){
         alert("acertou");
     }else{
         $(".jogo").css("display","none");
@@ -22,13 +29,17 @@ function terminar() {
         $(".ball").css("display","none");
         $("#play").css("display","none");
         $("#perdeu").css("display","block");
-        $("#perdeu").css("margin-left","38%");
+        //$("#perdeu").css("margin-left","38%");
         $(".avisos").css("display","block");
+        $(".listas").css("display","none");
+        $(".game").css("margin-top","5vh");
+  
     }
+    
 
-    /*console.log("Placa mãe no A: " + ((document.getElementById("ball").offsetLeft > document.getElementById("gate").offsetLeft && document.getElementById("ball").offsetLeft < document.getElementById("gate2").offsetLeft) && (document.getElementById("ball").offsetTop > document.getElementById("gate").offsetTop) && (document.getElementById("ball").offsetTop < (document.getElementById("gate").offsetTop + document.getElementById("gate").offsetHeight))));
-    console.log("Placa mãe no B: " + ((document.getElementById("ball").offsetLeft > (document.getElementById("gate").offsetLeft + document.getElementById("gate").offsetWidth) && document.getElementById("ball").offsetLeft < (document.getElementById("gate2").offsetLeft + document.getElementById("gate2").offsetWidth)) && (document.getElementById("ball").offsetTop > document.getElementById("gate2").offsetTop) && (document.getElementById("ball").offsetTop < (document.getElementById("gate2").offsetTop + document.getElementById("gate2").offsetHeight))));
-    console.log("Placa mãe na junção: " + ((document.getElementById("ball").offsetLeft > document.getElementById("gate2").offsetLeft && document.getElementById("ball").offsetLeft < (document.getElementById("gate").offsetLeft + document.getElementById("gate").offsetWidth)) && (document.getElementById("ball").offsetTop > document.getElementById("gate").offsetTop) && (document.getElementById("ball").offsetTop < (document.getElementById("gate").offsetTop + document.getElementById("gate").offsetHeight))));
+    /*console.log("Placa mãe no A: " + ((ball.getBoundingClientRect().left > gate.getBoundingClientRect().left && ball.getBoundingClientRect().left < gate2.getBoundingClientRect().left) && (ball.getBoundingClientRect().top > gate.getBoundingClientRect().top) && (ball.getBoundingClientRect().top < (gate.getBoundingClientRect().top + gate.offsetHeight))));
+    console.log("Placa mãe no B: " + ((ball.getBoundingClientRect().left > (gate.getBoundingClientRect().left + gate.offsetWidth) && ball.getBoundingClientRect().left < (gate2.getBoundingClientRect().left + gate2.offsetWidth)) && (ball.getBoundingClientRect().top > gate2.getBoundingClientRect().top) && (ball.getBoundingClientRect().top < (gate2.getBoundingClientRect().top + gate2.offsetHeight))));
+    console.log("Placa mãe na junção: " + ((ball.getBoundingClientRect().left > gate2.getBoundingClientRect().left && ball.getBoundingClientRect().left < (gate.getBoundingClientRect().left + gate.offsetWidth)) && (ball.getBoundingClientRect().top > gate.getBoundingClientRect().top) && (ball.getBoundingClientRect().top < (gate.getBoundingClientRect().top + gate.offsetHeight))));
 */
 }
 
@@ -37,6 +48,8 @@ function jogar(){
     $(".ball").css("display","block");
     $(".jogo").css("display","block");
     $(".avisos").css("display","none");
+    $(".listas").css("display","block");
+    $(".game").css("margin-top","-20vh");
 }
 
 

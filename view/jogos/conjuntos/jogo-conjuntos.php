@@ -38,40 +38,34 @@
             </div>
         </div>
     </div>
-
-    <div class="avisos">
-        <img src="imgs/play.png" id="play" onclick="jogar()"/>
-        <img src="imgs/perdeu.png" id="perdeu" onclick="jogar()"/>
+    <div class="cabecalho">
+            <a class="" href="../../pag-home-aluno.php">
+                <img src="../../imgs/LOGO-RISECODE2.png" class="icon-risecode-header" alt="">
+            </a>
+            <p class="texto-perfil-header" data-toggle="modal" data-target="#modalPerfil">Perfil</p>
     </div>
 
-    <div class="row jogo">
-        <div class="col">
-            <img src="https://image.flaticon.com/icons/svg/1488/1488543.svg" id="ball" class="ball">
-            <img src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/256/62831-computer-mouse-icon.png"
-                id="ball2" class="ball">
-            <img src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/256/62829-keyboard-icon.png" id="ball3"
-                class="ball">
-            <img src="https://clipartart.com/images/clipart-hard-drive-9.png" id="ball4" class="ball" style="width: 50px;">
-
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Disk_pack1.svg" id="gate" class="droppable gate">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Disk_pack1.svg" id="gate2" class="droppable gate">
+    <div class="conteudo container-fluid">
+        <div class="listas">
+            <p>Lado 1: Mouse, Placa Mãe, Disco Rígido</p>
+            <p>Lado 2: Teclado, Mouse</p>
         </div>
-        <div class="col">
-            <div class="conteudo">
-                <h1 class="lista">Lado 1: Mouse, Placa Mãe, Disco Rígido</h1>
-                <h1 class="lista">Lado 2: Teclado, Mouse</h1>
-                <button class="btn btn-primary espaco" id="terminar" onclick="terminar()">Terminei</button>
-                <a class="" href="../../pag-home-aluno.php">
-                    <button class="btn btn-primary espaco">Voltar para a página inicial</button>
-                </a>
-                <h2 class="espaco">Para jogar, basta apenas clicar sobre o componente do computador e arrastar para o lado correto!
-                <h4 class="espaco">Importante saber: Conjuntos são grupos de elementos diferentes.
-                Os elementos de um conjunto são as coisas que ficam dentro dele.
-                Os lados/listas que colocamos aqui, na verdade são esses grupos.
-                Se houver um elemento repetido nas duas listas, é porque ele
-                pertence aos dois grupos, então deve ser colocado no meio.
-                Isso se chama intersecção.
-                </h4>
+        <div class="game">
+            <div class="avisos">
+                <img src="imgs/play.png" id="play" onclick="jogar()"/>
+                <img src="imgs/perdeu.png" id="perdeu" onclick="jogar()"/>
+            </div>
+            <div class="jogo">
+                <img src="imgs/Disk_pack1.svg" id="gate" class="droppable gate">
+                <img src="imgs/Disk_pack1.svg" id="gate2" class="droppable gate">
+
+                <img src="imgs/1488543.svg" id="ball" class="ball">
+                <img src="imgs/62831-computer-mouse-icon.png"
+                    id="ball2" class="ball">
+                <img src="imgs/62829-keyboard-icon.png" id="ball3"
+                    class="ball">
+                <img src="imgs/clipart-hard-drive-9.png" id="ball4" class="ball">
+                <button class="btn btn-primary espaco" id="terminar" onclick="terminar()">Terminei!</button>
             </div>
         </div>
     </div>

@@ -22,7 +22,7 @@ body {
     background-repeat: repeat-x, repeat-x;
     background-position: top, bottom;
     background-size: 80vw, 40vw;      
-    height: 800px;
+    height: 100%;
     animation: moving 8s infinite alternate;
 }
 
@@ -45,11 +45,6 @@ body {
 }
 .container-especializado{
 	padding:0;
-}
-
-.conteudo {
-    margin-top: 15vh;
-    margin-left: 45%;
 }
 
 .cabecalho {
@@ -105,61 +100,88 @@ body {
     margin-bottom:20px;
 }
 
-.itensJogo{
-}
-
 .gate {
     cursor: pointer;
-    width: 28em;
-    height: 28em;
+    width: 45vh;
+    height: 45vh;
     filter: invert(30%) sepia(70%) saturate(2600%) hue-rotate(346deg) brightness(130%) contrast(78%);
     position: absolute;
     opacity: .7;
     z-index: 10;
-    top: 6em;
+    top: 2vh;
 }
 
 #gate2 {
     filter: invert(30%) sepia(70%) saturate(2600%) hue-rotate(200deg) brightness(130%) contrast(78%);
-    left: 18em;
+    left: 30vh;
 }
 
 .ball {
     cursor: move;
-    width: 5em;
-    height: 5em;
+    width: 10vh;
+    height: 10vh;
     position: absolute;
     z-index: 11;
-    top: 1em;
+    top: 48vh;
 }
 
 
 #ball2{
-    left: 6em;
+    left: 12vh;
 }
 
 #ball3{
-    left: 12em;
+    left: 24vh;
 }
 
 #ball4{
-    left: 18em;
+    left: 36vh;
+}
+
+#terminar{
+    left: 60vh;
+    top: 48.5vh;
+    position: absolute;
+    background-color: darkcyan;
+    width: 20vh;
+    height: 5vh;
 }
 
 .espaco{
     margin-top: 1em;
 }
 
-.jogo{
-    display:none;
-}
-
-.avisos{
+.conteudo{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding:15px 100px 15px 100px;
-    margin-top: 15em;
+    width: 100vh;
+    height: 100vh;
+}
+
+.game{
+    position: relative;
+    width: 100vh;
+    height: 60vh;
+    background-image: url('imgs/fundoJogo.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;   
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.jogo{
+    position: relative;
+    display:none;
+    margin-right: 75vh;
+}
+
+.avisos{
+    margin-top: 15vh;
 }
 
 #play{
@@ -168,5 +190,11 @@ body {
 
 #perdeu{
     cursor: pointer;
+    display: none;
+}
+
+.listas{
+    font-size: 3vh;
+    margin-top: -8vh;
     display: none;
 }

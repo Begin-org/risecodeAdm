@@ -22,13 +22,8 @@ body {
     background-repeat: repeat-x, repeat-x;
     background-position: top, bottom;
     background-size: 80vw, 40vw;      
-    height: 100vh;
+    height: 800px;
     animation: moving 8s infinite alternate;
-}
-
-canvas{
-    border-radius:10px;
-    border:3px solid white!important;
 }
 
 /* barra */
@@ -53,11 +48,8 @@ canvas{
 }
 
 .conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding:15px 100px 15px 100px;
-    margin-top: 6vh;
+    margin-top: 15vh;
+    margin-left: 45%;
 }
 
 .cabecalho {
@@ -111,4 +103,70 @@ canvas{
     font-size:14pt;
     margin-top: 20px;
     margin-bottom:20px;
+}
+
+.itensJogo{
+}
+
+.gate {
+    cursor: pointer;
+    width: 28em;
+    height: 28em;
+    filter: invert(30%) sepia(70%) saturate(2600%) hue-rotate(346deg) brightness(130%) contrast(78%);
+    position: absolute;
+    opacity: .7;
+    z-index: 10;
+    top: 6em;
+}
+
+#gate2 {
+    filter: invert(30%) sepia(70%) saturate(2600%) hue-rotate(200deg) brightness(130%) contrast(78%);
+    left: 18em;
+}
+
+.ball {
+    cursor: move;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    z-index: 11;
+    top: 1em;
+}
+
+
+#ball2{
+    left: 6em;
+}
+
+#ball3{
+    left: 12em;
+}
+
+#ball4{
+    left: 18em;
+}
+
+.espaco{
+    margin-top: 1em;
+}
+
+.jogo{
+    display:none;
+}
+
+.avisos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding:15px 100px 15px 100px;
+    margin-top: 15em;
+}
+
+#play{
+    cursor: pointer;
+}
+
+#perdeu{
+    cursor: pointer;
+    display: none;
 }
