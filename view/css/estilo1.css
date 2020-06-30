@@ -28,7 +28,7 @@ body{
     background-repeat: repeat-x, repeat-x;
     background-position: top, bottom;
     background-size: 80vw, 40vw;      
-    height: 800px;
+    height: 1000px;
     animation: moving 8s infinite alternate;
 }
 
@@ -124,7 +124,7 @@ body{
 
 .content-chao {
 	width:100%;
-	height:1650;
+	height:120vw;
 	background-color: #23485e;
 	padding-top: 100px;
 }
@@ -144,7 +144,7 @@ body{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width:58vw;
-    height:300px;
+    height:auto;
     margin:0 auto;
     border-radius: 10px;
     transform: all 0.3s;

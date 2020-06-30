@@ -183,21 +183,22 @@
             }       
         }
 
-        function arrasta(evento){
-            var posX = evento.clientX,
-            posY = evento.clientY;
-            
-                if(posX>xMouse && bloco.x<744){
-                    bloco.x+=5;
-                    xMouse = posX;
-                    yMouse = posY;
-                }else if(posX<xMouse && bloco.x>0){
-                    bloco.x-=5;
-                    xMouse = posX;
-                    yMouse = posY;
-                }      
+        function mover(evento){
+            var key = evento.keyCode;
+                
+            if(key==37){
+                if(bloco.x>0){
+                    bloco.x-=10;
+                }
+                    
+            } else if(key==39) {
+                if(bloco.x<725){
+                    bloco.x+=10;
+                }
+            }
+              
         }
-
+        
         //loop do jogo
         function roda(){
             atualiza();
@@ -260,7 +261,7 @@
             var conteudo = document.getElementById("conteudo");
             conteudo.appendChild(canvas);
             canvas.addEventListener("mousedown", clique);
-            canvas.addEventListener("mousemove", arrasta);
+            document.addEventListener("keydown", mover);
 
             estadoAtual = estados.jogar;
 
