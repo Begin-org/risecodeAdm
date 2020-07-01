@@ -17,67 +17,73 @@
 
 <body>
 <div class="container-fluid container-especializado">
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large botao-fab">
-          <i class="fa fa-question" id="icone-fab"></i>
-        </a>
-        <ul>
-          <li><a class="btn-floating blue darken-4"><i class="fa fa-facebook fa-2x"></i></a></li>
-          <li><a class="btn-floating blue"><i class="fa fa-twitter fa-2x"></i></a></li>
-          <li><a class="btn-floating red darken-2"><i class="fa fa-youtube fa-2x"></i></a></li>
-        </ul>
-      </div>
-      <div class="cabecalho">
-        <a class="botao-login-adm" href="pag-login-adm.php" role="button">Administrador</a>
-      </div>
-      <img src="imgs/logo-site.png" class="round mx-auto d-block logo" alt="...">
-      <a data-toggle="collapse" href="#collapseLogin" role="button" aria-expanded="false" aria-controls="collapseLogin">
-        <img src="imgs/botao-site.png" class="botao-jogar">
-      </a>
-	  <div class="chao"></div>
-	  <div class="content-chao">
-      <div class="collapse" id="collapseLogin">
-        <p class="titulo-login-aluno">Faça login</p>
-        <div class="login-aluno row d-flex justify-content-center">  
-          <form name="loginAluno" id="loginAluno" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <input type="hidden" id="tipoUsuario" name="txtTipo" value="4">
-              <label for="loginAluno" class="labels-forms-login">Login</label>
-              <input type="text" class="forms-login" id="txtLogin" placeholder="" name="txtLogin"> 
-            </div>
-            <div class="form-group form-group-personalizado">
-              <label for="senhaAluno" class="labels-forms-login">Senha</label>
-              <input type="password" class="forms-login" id="txtSenha" placeholder="" name="txtSenha">
-            </div>
-            <input type="submit" class="botao-form-login" value="Entrar">
-          </form>
-        </div>
-      </div>
-		  <div class="content-video" id="content-video">
-        <iframe class="content-video" src="https://www.youtube.com/embed/8x8snCopCpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="titulo-oque">
-        O QUE É RISECODE?
-      </div>
-      <div class="content-para-alunos">
-        <img src="imgs/girl-oque-e.png" class="girl-oque-e"/>
-        <p class="titulo-para-alunos"> </p>
-        <ul>
-          <li class="estilo-li"><img src="imgs/topico1.png"> &nbsp Uma plataforma de jogos educativos.</li>
-          <li class="estilo-li" style="margin-left:8vw;"><img src="imgs/topico2.png"> &nbsp Diversos mini-jogos voltados para lógica e informática.</li>
-          <li class="estilo-li"><img src="imgs/topico1.png">  &nbsp Um jeito divertido de aprender.</li>
-        </ul>
-      </div>
-      <div class="content-para-profes">
-        <img src="imgs/boy-oque-e.png" class="boy-oque-e"/>
-        <p class="titulo-para-alunos"> </p>
-        <ul>
-          <li class="estilo-li"><img src="imgs/topico1.png"> &nbsp Um sistema administrativo integrado a plataforma de jogos.</li>
-          <li class="estilo-li" style="margin-left:8vw;"><img src="imgs/topico2.png"> &nbsp Professores podem acompanhar desempenho de alunos.</li>
-          <li class="estilo-li"><img src="imgs/topico1.png">  &nbsp Escolas podem ensinar de uma forma descontraída.</li>
-        </ul>
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large botao-fab">
+      <i class="fa fa-question" id="icone-fab"></i>
+    </a>
+    <ul>
+      <li><a class="btn-floating blue darken-4"><i class="fa fa-facebook fa-2x"></i></a></li>
+      <li><a class="btn-floating blue"><i class="fa fa-twitter fa-2x"></i></a></li>
+      <li><a class="btn-floating red darken-2"><i class="fa fa-youtube fa-2x"></i></a></li>
+    </ul>
+  </div>
+
+  <div class="cabecalho">
+    <a class="botao-login-adm" href="pag-login-adm.php" role="button">Administrador</a>
+  </div>
+  <div class="d-flex flex-wrap flex-row justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+    <img src="imgs/logo-site.png" alt="..."></div>
+    <a data-toggle="collapse" href="#collapseLogin" role="button" aria-expanded="false" aria-controls="collapseLogin">
+      <img src="imgs/botao-site.png" class="botao-jogar">
+  </a>
+  </div>
+	<div class="chao"></div>
+	<div class="content-chao">
+    
+    <div class="collapse" id="collapseLogin">
+      <p class="titulo-login-aluno">Faça login</p>
+      <div class="login-aluno row d-flex justify-content-center">  
+        <form name="loginAluno" id="loginAluno" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <input type="hidden" id="tipoUsuario" name="txtTipo" value="4">
+            <label for="loginAluno" class="labels-forms-login">Login</label>
+            <input type="text" class="forms-login" id="txtLogin" placeholder="" name="txtLogin"> 
+          </div>
+          <div class="form-group form-group-personalizado">
+            <label for="senhaAluno" class="labels-forms-login">Senha</label>
+            <input type="password" class="forms-login" id="txtSenha" placeholder="" name="txtSenha">
+          </div>
+          <input type="submit" class="botao-form-login" value="Entrar">
+        </form>
       </div>
     </div>
+
+		<div class="content-video" id="content-video">
+      <iframe class="content-video" src="https://www.youtube.com/embed/8x8snCopCpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="titulo-oque">
+      O QUE É RISECODE?
+    </div>
+    <div class="content-para-alunos">
+      <img src="imgs/girl-oque-e.png" class="girl-oque-e"/>
+      <p class="titulo-para-alunos"> </p>
+      <ul>
+        <li class="estilo-li"><img src="imgs/topico1.png"> &nbsp Uma plataforma de jogos educativos.</li>
+        <li class="estilo-li" style="margin-left:8vw;"><img src="imgs/topico2.png"> &nbsp Diversos mini-jogos voltados para lógica e informática.</li>
+        <li class="estilo-li"><img src="imgs/topico1.png">  &nbsp Um jeito divertido de aprender.</li>
+      </ul>
+    </div>
+    <div class="content-para-profes">
+      <img src="imgs/boy-oque-e.png" class="boy-oque-e"/>
+      <p class="titulo-para-alunos"> </p>
+      <ul>
+        <li class="estilo-li"><img src="imgs/topico1.png"> &nbsp Um sistema administrativo integrado a plataforma de jogos.</li>
+        <li class="estilo-li" style="margin-left:8vw;"><img src="imgs/topico2.png"> &nbsp Professores podem acompanhar desempenho de alunos.</li>
+        <li class="estilo-li"><img src="imgs/topico1.png">  &nbsp Escolas podem ensinar de uma forma descontraída.</li>
+      </ul>
+    </div>
+  </div>
     <footer class="footer">Desenvolvido por <br><img src="imgs/logos-titulos-begin-branco.png"></footer> 
   </div>
 

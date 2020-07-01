@@ -93,16 +93,12 @@ body{
     text-decoration: none;
 }
 
-.logo{
-    margin-top:-90px;
-}
 
 .botao-jogar {
     background-color: transparent;
     width:40vw;
     height: 34vh;
-    margin-top: 3vh;
-    margin-left: 30vw;
+    margin-top: 20px;
     transition: all 0.3 ease;
 }
 
@@ -126,14 +122,14 @@ body{
 	width:100%;
 	height:120vw;
 	background-color: #23485e;
-	padding-top: 100px;
+	padding-top: 5vw;
 }
 
 .titulo-login-aluno{
     font-family: 'Londrina Solid', cursive;
     color: #E8C28B;
     font-size: 50px;
-    margin-top: -10vh;
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -149,7 +145,7 @@ body{
     border-radius: 10px;
     transform: all 0.3s;
     align-items: center;
-    margin-top: -5vh;
+    margin-top: 2vw;
 }
 
 .labels-forms-login{
@@ -194,7 +190,7 @@ body{
     height:400px;
     margin:0 auto;
     border-radius: 10px;
-    border: 4px solid #404040;
+    border: 4px solid #362b2b;
 }
 
 .titulo-oque{
