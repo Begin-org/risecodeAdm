@@ -188,12 +188,12 @@
                 
             if(key==37){
                 if(bloco.x>0){
-                    bloco.x-=15;
+                    bloco.x-=20;
                 }
                     
             } else if(key==39) {
                 if(bloco.x<725){
-                    bloco.x+=15;
+                    bloco.x+=20;
                 }
             }
               
