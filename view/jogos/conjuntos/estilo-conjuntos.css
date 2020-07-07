@@ -193,6 +193,11 @@ body {
     display: none;
 }
 
+#ganhou{
+    cursor: pointer;
+    display: none;
+}
+
 .listas{
     font-size: 3vh;
     margin-top: -8vh;

@@ -22,13 +22,22 @@ function terminar() {
     && (ball4.getBoundingClientRect().left > gate.getBoundingClientRect().left && ball4.getBoundingClientRect().left < gate2.getBoundingClientRect().left) && (ball4.getBoundingClientRect().top > gate.getBoundingClientRect().top) && (ball4.getBoundingClientRect().top < (gate.getBoundingClientRect().top + gate.offsetHeight))
     && ((ball2.getBoundingClientRect().left && ball2.getBoundingClientRect().left < (gate.getBoundingClientRect().left + gate.offsetWidth)) && (ball2.getBoundingClientRect().top > gate.getBoundingClientRect().top) && (ball2.getBoundingClientRect().top < (gate.getBoundingClientRect().top + gate.offsetHeight)))
     && ((ball3.getBoundingClientRect().left > (gate.getBoundingClientRect().left + gate.offsetWidth) && ball3.getBoundingClientRect().left < (gate2.getBoundingClientRect().left + gate2.offsetWidth)) && (ball3.getBoundingClientRect().top > gate2.getBoundingClientRect().top) && (ball3.getBoundingClientRect().top < (gate2.getBoundingClientRect().top +gate2.offsetHeight)))){
-        alert("acertou");
+        $(".jogo").css("display","none");
+        $(".gate").css("display","none");
+        $(".ball").css("display","none");
+        $("#play").css("display","none");
+        $("#ganhou").css("display","block");
+        $("#perdeu").css("display","none");
+        $(".avisos").css("display","block");
+        $(".listas").css("display","none");
+        $(".game").css("margin-top","5vh");
     }else{
         $(".jogo").css("display","none");
         $(".gate").css("display","none");
         $(".ball").css("display","none");
         $("#play").css("display","none");
-        $("#perdeu").css("display","block");
+        $("#perdeu").css("display","block");    
+        $("#ganhou").css("display","none");
         //$("#perdeu").css("margin-left","38%");
         $(".avisos").css("display","block");
         $(".listas").css("display","none");
@@ -48,6 +57,8 @@ function jogar(){
     $(".ball").css("display","block");
     $(".jogo").css("display","block");
     $(".avisos").css("display","none");
+    $("#ganhou").css("display","none");
+    $("#perdeu").css("display","none");
     $(".listas").css("display","block");
     $(".game").css("margin-top","-20vh");
 }

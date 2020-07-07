@@ -47,13 +47,14 @@
 
     <div class="conteudo container-fluid">
         <div class="listas">
-            <p>Lado 1: Mouse, Placa Mãe, Disco Rígido</p>
-            <p>Lado 2: Teclado, Mouse</p>
+            <p>Salmão: Mouse, Placa Mãe, Disco Rígido</p>
+            <p>Azul: Teclado, Mouse</p>
         </div>
         <div class="game">
             <div class="avisos">
                 <img src="imgs/play.png" id="play" onclick="jogar()"/>
                 <img src="imgs/perdeu.png" id="perdeu" onclick="jogar()"/>
+                <a class="" href="jogo-conjuntos.php"><img src="imgs/ganhou.png" id="ganhou"></a>
             </div>
             <div class="jogo">
                 <img src="imgs/Disk_pack1.svg" id="gate" class="droppable gate">
