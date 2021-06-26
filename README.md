@@ -1,5 +1,7 @@
 <h1 align="center">Risecode</h1>
 
+<a href="https://github.com/Begin-org/risecodeMobile">Veja também o repositório da aplicação mobile</a>
+
 - [Sobre 📖](#sobre-)
 - [Layout 🎨](#layout-)
 - [Diagramas 📁](#diagramas-)
