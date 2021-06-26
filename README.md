@@ -6,13 +6,14 @@
 
 <h2>Sobre 📖</h2>
 
-<img src="src/assets/infoGrafico.jpg"/>
+<img src="view/imgs/infoGrafico.jpg"/>
 
 ---
 
 <h2>Layout 🎨</h2>
 
-
+![risecode1](https://user-images.githubusercontent.com/45825131/123526287-3d3c9980-d6ad-11eb-93e1-55bc9abb0154.gif)
+![risecode2](https://user-images.githubusercontent.com/45825131/123526391-f4391500-d6ad-11eb-887d-a6124a51b8b6.gif)
 
 ---
 
